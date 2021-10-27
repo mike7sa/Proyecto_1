@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url('img/ethan-rheams-sSOYcNt3R54-unsplash.jpg');
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    list-style: none; 
+}
+
+ul{
+    /*background: grey;*/
+    margin: auto auto;
+    list-style: none;
+    display: flex;
+    
+}
+
+ul li a{
+    align-items: center;
+    padding: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+ul li a.select{
+    background: rgb(11, 11, 211);
+    padding: 0.5rem;
+    
+}
+
+ul li a:hover{
+    background: yellowgreen;
+}
+
+a{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color: green;
+}
+
+.logo{
+   width: 100%;
+   width: 6rem;   
+}
+
+.imagmain{
+    width: 100%;
+ }
+
+.conta{
+    display: grid;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto auto;
+        /*1.6rem (arriba y abajo), auto para centrar!!*/
+    grid-gap: 10px;
+       /* separacion entre las cajas internas*/
+    grid-template-areas: "header header header header header"
+                         "contenido contenido contenido contenido aside"
+                         "footer footer footer footer footer";
+
+}
+
+.contenido .article {
+    max-width: 100%;
+   /* background: #033a501c; 
+   border: 1px solid black;*/
+    padding: 1rem;
+    margin: 1rem;
+    
+}
+
+.article{
+    background:  #033a50bd;
+    
+}
+
+.aside .div {
+    padding: 1rem;
+    margin: 1rem;
+    background: #033a50;
+    border: 1px solid yellow;
+}
+
+/*.header .nav {
+    color: red;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    background: #033a50;
+    border: 1px solid black;
+}*/
+
+.header{ 
+    padding: 2rem;
+    grid-area: header;
+    /*background: #033a5075;*/
+    background: rgba(0, 128, 0, 0.26);
+    background-image: url('img/planeta-tierra-e1570462065623.jpg')
+    
+}
+
+.contenido{
+    grid-area: contenido;
+    background:  #033a5059; 
+}
+
+.aside{
+    grid-area: aside;
+    text-align: center;
+}
+
+.img{
+    background: rgba(1, 88, 1, 0.105);
+
+}
+
+.fter{
+    grid-area: footer;
+    background: #033a509c;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    .conta{
+      /* background: purple;*/
+        grid-template-areas: 
+            "header header header header header"
+            "contenido contenido contenido contenido aside"
+            "footer footer footer footer footer";
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .conta{
+        /*background: red;*/
+        grid-template-areas: 
+            "header header header header header"
+            "contenido contenido contenido contenido contenido"
+            "aside aside aside aside aside"
+            "footer footer footer footer footer";
+    } 
+}
